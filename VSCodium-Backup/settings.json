@@ -1,0 +1,200 @@
+{
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  //"editor.formatOnSaveMode": "modifications",
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "explorer.confirmDragAndDrop": false,
+  // disable pop Up Help
+  "editor.parameterHints.enabled": false,
+  "editor.hover.enabled": "off",
+  "sync.gist": "dbac176573a68a306bbbb5d03e81aecb",
+  "explorer.confirmDelete": false,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  // not needed if using Inteliphense
+  "php.validate.enable": false,
+  "php.validate.executablePath": "C:\\php\\php.exe",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[yaml]": {
+    //"editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.autoIndent": "advanced"
+  },
+  "sshfs.configpaths": [],
+  "prettier.enableDebugLogs": true,
+  "terminal.integrated.tabs.enabled": true,
+  "redhat.telemetry.enabled": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "workbench.colorTheme": "VLight",
+  "css.hover.references": false,
+  "css.validate": false,
+  "less.validate": false,
+  "html.hover.references": false,
+  "html.hover.documentation": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.enableSmartCommit": true,
+  "sftp.downloadWhenOpenInRemoteExplorer": true,
+  "scss.validate": true,
+  "scss.lint.zeroUnits": "warning",
+  "prettier.stylelintIntegration": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "pythonIndent.trimLinesWithOnlyWhitespace": true,
+  "python.defaultInterpreterPath": "C:\\Python\\Python313\\python.exe",
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "210",
+    "--experimental",
+    "--indent-size=2"
+  ],
+  "python.analysis.indexing": true,
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "",
+      "depth": 3
+    },
+  ],
+  "python.formatting.yapfArgs": [
+    "--style",
+    "{based_on_style: chromium, indent_width: 2}"
+  ],
+  "black-formatter.args": [
+    "--line-length",
+    "210"
+  ],
+  "python.diagnostics.sourceMapsEnabled": true,
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "python.analysis.diagnosticMode": "workspace",
+  "editor.accessibilitySupport": "off",
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.defaultLanguage": "python",
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.executorMapByFileExtension": {
+    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+    ".vbs": "cscript //Nologo",
+    ".scala": "scala",
+    ".jl": "julia",
+    ".cr": "crystal",
+    ".ml": "ocaml",
+    ".zig": "zig run",
+    ".exs": "elixir",
+    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    ".rkt": "racket",
+    ".scm": "csi -script",
+    ".ahk": "autohotkey",
+    ".au3": "autoit3",
+    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    ".kts": "kotlinc -script",
+    ".dart": "dart",
+    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    ".hs": "runhaskell",
+    ".nim": "nim compile --verbosity:0 --hints:off --run",
+    ".csproj": "dotnet run --project",
+    ".fsproj": "dotnet run --project",
+    ".lisp": "sbcl --script",
+    ".kit": "kitc --run",
+    ".v": "v run",
+    ".vsh": "v run",
+    ".sass": "sass --style expanded",
+    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    ".ring": "ring",
+    ".sml": "cd $dir && sml $fileName"
+  },
+  "code-runner.executorMapByGlob": {
+    "php": "C:\\php\\php.exe",
+    "python": "python",
+    "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
+    "go": "go run",
+    "pom.xml": "cd $dir && mvn clean package"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.editor.enablePreview": false,
+  "window.zoomLevel": 3,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "editor.stickyScroll.scrollWithEditor": false,
+  "workbench.tree.enableStickyScroll": false,
+  "editor.stickyScroll.enabled": false,
+  "html.format.wrapLineLength": 0,
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.15)",
+    "rgba(127,255,127,0.15)",
+    "rgba(255,127,255,0.15)",
+    "rgba(79,236,236,0.15)"
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "phpdoc-generator.comparisonOfShortTypes": {
+    "int": "integer",
+    "bool": "boolean"
+  },
+  "debug.javascript.autoAttachFilter": "always",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.startupEditor": "none",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "pyright.disableLanguageServices": false,
+  "python.analysis.autoImportCompletions": true,
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll.ruff": "explicit",
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": "explicit"
+    }
+  },
+  // Ruff: enable linting and import sorting fixes
+  "ruff.lint.enable": true,
+  "ruff.lint.select": [
+    "I"
+  ],
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "[powershell]": {
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "editor.semanticHighlighting.enabled": false,
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedTypes": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "intelephense.diagnostics.typeErrors": false
+}
