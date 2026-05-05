@@ -3,8 +3,6 @@
 # VSCodium Backup and Restore Script for Linux/macOS
 # Syncs extensions, settings, keybindings, tasks, and snippets
 
-set -euo pipefail
-
 ACTION=""
 BACKUP_PATH="./VSCodium-Backup"
 HELP=false
