@@ -16,15 +16,24 @@ GRAY='\033[0;90m'
 WHITE='\033[0;37m'
 NC='\033[0m' # No Color
 
-# Detect OS and set paths
+# Detect OS, Flatpak, and set paths
+FLATPAK_MODE=false
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS
     VSCODIUM_USER_PATH="$HOME/Library/Application Support/VSCodium/User"
     VSCODIUM_APP_PATH="$HOME/Library/Application Support/VSCodium"
 else
-    # Linux
-    VSCODIUM_USER_PATH="$HOME/.config/VSCodium/User"
-    VSCODIUM_APP_PATH="$HOME/.config/VSCodium"
+    # Linux - check for Flatpak first
+    if flatpak info com.vscodium.codium &>/dev/null; then
+        FLATPAK_MODE=true
+        VSCODIUM_USER_PATH="$HOME/.var/app/com.vscodium.codium/config/VSCodium/User"
+        VSCODIUM_APP_PATH="$HOME/.var/app/com.vscodium.codium/config/VSCodium"
+    else
+        # Native Linux installation
+        VSCODIUM_USER_PATH="$HOME/.config/VSCodium/User"
+        VSCODIUM_APP_PATH="$HOME/.config/VSCodium"
+    fi
 fi
 
 # Parse arguments
@@ -75,14 +84,29 @@ show_help() {
     echo -e "  -b, --backup-path PATH     Path to backup directory (default: ./VSCodium-Backup)"
     echo -e "  -h, --help                 Show this help message"
     echo ""
+    echo -e "${YELLOW}Supported Installations:${NC}"
+    echo -e "  • Native Linux (Ubuntu, Fedora, etc.)"
+    echo -e "  • Flatpak/Flathub (Fedora KDE, GNOME, etc.)"
+    echo -e "  • macOS"
+    echo ""
     echo -e "${YELLOW}Notes:${NC}"
     echo -e "  Restore always removes existing extensions and clears all caches first."
+    echo -e "  Script automatically detects Flatpak installations."
     echo ""
 }
 
 test_prerequisites() {
     local codium_cmd
-    if command -v codium &> /dev/null; then
+
+    if [[ "$FLATPAK_MODE" == true ]]; then
+        if command -v flatpak &> /dev/null; then
+            codium_cmd="flatpak run com.vscodium.codium"
+            write_status "Detected Flatpak installation of VSCodium" "$CYAN"
+        else
+            write_status "ERROR: Flatpak detected but flatpak command not found!" "$RED"
+            return 1
+        fi
+    elif command -v codium &> /dev/null; then
         codium_cmd="codium"
     elif command -v code &> /dev/null; then
         codium_cmd="code"

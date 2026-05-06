@@ -4,9 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a VSCodium settings backup and restore utility for Windows. It synchronizes VSCodium configuration, extensions, and other settings between the live installation and a git-tracked backup directory.
+This is a VSCodium settings backup and restore utility for Windows, Linux, and macOS. It synchronizes VSCodium configuration, extensions, and other settings between the live installation and a git-tracked backup directory.
 
 **Main purpose:** Enable version control and reproduction of VSCodium configurations across machines.
+
+**Supported Platforms:**
+- Windows (PowerShell)
+- Linux (native installation or Flatpak/Flathub)
+- macOS
 
 ## Running the Script
 
@@ -60,11 +65,17 @@ chmod +x VSCodiumSync.sh backup.sh restore.sh
 
 **Platform Detection**
 
-The bash script automatically detects the OS and uses the correct paths:
+The bash script automatically detects the OS, installation type, and uses the correct paths:
 - **macOS:** `~/Library/Application Support/VSCodium/User`
-- **Linux:** `~/.config/VSCodium/User`
+- **Linux (native):** `~/.config/VSCodium/User`
+- **Linux (Flatpak/Flathub):** `~/.var/app/com.vscodium.codium/config/VSCodium/User`
 
-It supports both `codium` and `code` (VS Code) commands.
+The script automatically detects Flatpak installations via `flatpak info com.vscodium.codium` and adjusts paths and command execution accordingly.
+
+It supports:
+- Native `codium` command
+- VS Code (`code`) as fallback
+- Flatpak execution via `flatpak run com.vscodium.codium`
 
 ## Code Architecture
 
@@ -126,7 +137,9 @@ The script is organized around these core functions:
 ## Known Constraints
 
 - **VSCodium/VSCode in PATH required:** Script checks for `codium` or `code` command; fails if not available
+- **Flatpak requirements:** For Flatpak installations, `flatpak` command must be available; script auto-detects via `flatpak info com.vscodium.codium`
 - **User interaction:** Restore operation requires user confirmation before proceeding
 - **Extension installation can be slow:** Fallback downloads from multiple sources; large extension lists may take time
 - **Bash script requires curl:** The Linux/macOS version uses `curl` for extension fallback downloads
 - **Temporary files:** Both scripts may create temporary VSIX files in `/tmp` (Linux) or `%TEMP%` (Windows) during extension installation
+- **Flatpak sandboxing:** Flatpak installations have restricted filesystem access; ensure `~/.var/app/com.vscodium.codium/` is accessible
