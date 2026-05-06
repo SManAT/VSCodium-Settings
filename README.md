@@ -1,0 +1,25 @@
+## Intro
+
+A tool to Backup and Restore Settings and Extensions for [VSCodium](https://vscodium.com/).
+Tested on Windows (not on Unix!)
+
+## Usage
+
+### Windows
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0VSCodiumSync.ps1"
+```
+
+or just 
+
+```powershell
+./VSCodiumSync.ps1
+```
+
+### Unix
+
+```bash
+./VSCodiumSync.sh
+```
+
