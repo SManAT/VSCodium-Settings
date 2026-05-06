@@ -20,6 +20,8 @@ or just
 ### Unix
 
 ```bash
+chmod +x restore.sh
+chmod +x VSCodiumSync.sh
 ./VSCodiumSync.sh
 ```
 
