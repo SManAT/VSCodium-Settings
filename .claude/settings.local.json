@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git update-index *)",
+      "Bash(git ls-files *)"
+    ]
+  }
+}
