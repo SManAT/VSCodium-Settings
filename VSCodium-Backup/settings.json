@@ -19,7 +19,7 @@
   "php.validate.enable": false,
   "php.validate.executablePath": "C:\\php\\php.exe",
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.f": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -69,19 +69,11 @@
   "git.confirmSync": false,
   "git.autofetch": true,
   "pythonIndent.trimLinesWithOnlyWhitespace": true,
-  "python.defaultInterpreterPath": "C:\\Python\\Python313\\python.exe",
   "python.formatting.autopep8Args": [
     "--max-line-length",
     "210",
     "--experimental",
     "--indent-size=2"
-  ],
-  "python.analysis.indexing": true,
-  "python.analysis.packageIndexDepths": [
-    {
-      "name": "",
-      "depth": 3
-    },
   ],
   "python.formatting.yapfArgs": [
     "--style",
@@ -95,7 +87,6 @@
   "[scss]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "python.analysis.diagnosticMode": "workspace",
   "editor.accessibilitySupport": "off",
   "code-runner.clearPreviousOutput": true,
   "code-runner.defaultLanguage": "python",
@@ -178,7 +169,6 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit",
       "source.fixAll.ruff": "explicit",
-      "editor.defaultFormatter": "ms-python.black-formatter",
       "editor.formatOnSave": "explicit"
     }
   },
@@ -187,7 +177,6 @@
   "ruff.lint.select": [
     "I"
   ],
-  "editor.defaultFormatter": "ms-python.black-formatter",
   "[powershell]": {
     "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
     "editor.semanticHighlighting.enabled": false,
@@ -196,5 +185,6 @@
   "intelephense.diagnostics.undefinedClassConstants": false,
   "intelephense.diagnostics.undefinedTypes": false,
   "intelephense.diagnostics.undefinedProperties": false,
-  "intelephense.diagnostics.typeErrors": false
+  "intelephense.diagnostics.typeErrors": false,
+  "editor.defaultFormatter": "ms-python.black-formatter",
 }
