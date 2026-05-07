@@ -1,4 +1,5 @@
 ﻿bmewburn.vscode-intelephense-client
+charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -11,6 +12,7 @@ kevinrose.vsc-python-indent
 mikestead.dotenv
 ms-python.black-formatter
 ms-python.debugpy
+ms-python.flake8
 ms-python.python
 ms-vscode.powershell
 nadim-vscode.html-meta-tags-hero
